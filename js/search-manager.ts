@@ -26,7 +26,7 @@ export class SearchManager implements ISearchManager {
         const normalizedQuery: string = query.toLowerCase().trim();
 
         items.forEach((item: Element): void => {
-            const description: Element | null = item.querySelector('span:not(.demo-badge)');
+            const description: Element | null = item.querySelector('p');
             const notes: HTMLTextAreaElement | null = item.querySelector('label textarea');
             
             if (description) {

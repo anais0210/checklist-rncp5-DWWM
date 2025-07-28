@@ -71,7 +71,7 @@ export class ResetManager implements IResetManager {
         notification.className = 'reset-notification';
         notification.innerHTML = `
             <div class="reset-notification-content">
-                <span>Checklist réinitialisée avec succès !</span>
+                <p>Checklist réinitialisée avec succès !</span>
             </div>
         `;
         

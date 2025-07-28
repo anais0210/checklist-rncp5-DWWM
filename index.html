@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script type="module" src="js/app.ts"></script>
+    <script type="module" src="dist/app.js"></script>
   </head>
   <body>
     <header class="header">
@@ -55,7 +55,7 @@
           <div class="progress-bar">
             <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
           </div>
-          <span id="progress-text">0%</span>
+          <p id="progress-text">0%</span>
         </div>
     </div>
     <main class="container">
@@ -75,6 +75,7 @@
                   title="Description de l'environnement de développement utilisé"
                   aria-label="Description de l'environnement de développement utilisé"
                 />
+                <p>Description de l'environnement de développement utilisé</p>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -87,7 +88,7 @@
                   title="Explication des choix techniques"
                   aria-label="Explication des choix techniques (IDE, frameworks, librairies, outils)"
                 />
-                <span
+                <p
                   >Explication des choix techniques (IDE, frameworks,
                   librairies, outils)</span
                 >
@@ -102,7 +103,7 @@
                   title="Processus d'installation et de configuration"
                   aria-label="Processus d'installation et de configuration (Readme, Documentation Notion/Word/etc …)"
                 />
-                <span
+                <p
                   >Processus d'installation et de configuration (Readme,
                   Documentation Notion/Word/etc …)</span
                 >
@@ -120,7 +121,7 @@
                   title="Containeuriser l'application"
                   aria-label="Containeuriser l'application (Docker, Podman, etc.)"
                 />
-                <span
+                <p
                   >Containeuriser l'application (Docker, Podman, etc.)</span
                 >
 
@@ -143,7 +144,7 @@
                   title="Création d'une charte graphique"
                   aria-label="Création d'une charte graphique"
                 />
-                <span>Création d'une charte graphique</span>
+                <p>Création d'une charte graphique</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -157,7 +158,7 @@
                     title="Charte graphique accessible"
                     aria-label="Charte graphique accessible"
                   />
-                  <span>Charte graphique accessible</span>
+                  <p>Charte graphique accessible</span>
   
                   <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -172,7 +173,7 @@
                   title="Présentation des maquettes et wireframes"
                   aria-label="Présentation des maquettes et wireframes"
                 />
-                <span>Présentation des maquettes et wireframes</span>
+                <p>Présentation des maquettes et wireframes</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -186,7 +187,7 @@
                   title="Explication des choix ergonomiques"
                   aria-label="Explication des choix ergonomiques et d'UX/UI"
                 />
-                <span>Explication des choix ergonomiques et d'UX/UI</span>
+                <p>Explication des choix ergonomiques et d'UX/UI</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -200,7 +201,7 @@
                   title="Description des technologies front-end"
                   aria-label="Description des technologies front-end utilisées (HTML, CSS, JavaScript, frameworks)"
                 />
-                <span
+                <p
                   >Description des technologies front-end utilisées (HTML, CSS,
                   JavaScript, frameworks)</span
                 >
@@ -217,7 +218,7 @@
                   title="Adaptation responsive/mobile"
                   aria-label="Adaptation responsive/mobile des interfaces sur maquettes"
                 />
-                <span
+                <p
                   >Adaptation responsive/mobile des interfaces sur
                   maquettes</span
                 >
@@ -234,7 +235,7 @@
                   title="Mise en œuvre des bonnes pratiques d'accessibilité"
                   aria-label="Mise en œuvre des bonnes pratiques d'accessibilité (couleur / label / zone cliquable etc …) sur maquettes"
                 />
-                <span
+                <p
                   >Mise en œuvre des bonnes pratiques d'accessibilité (couleur /
                   label / zone cliquable etc …) sur maquettes</span
                 >
@@ -257,7 +258,7 @@
                   title="Architecture des composants métier"
                   aria-label="Architecture des composants métier développés (Structure, Découpage …)"
                 />
-                <span
+                <p
                   >Architecture des composants (Structure modulable,
                   découpage fonctionnel, etc...)</span
                 >
@@ -274,7 +275,7 @@
                   title="Patterns de conception"
                   aria-label="Patterns de conception implémentés"
                 />
-                <span>Patterns de conception implémentés (Singleton, Factory, Observer, Strategy, Adapter, Repository, MVC / MVVM / MVU,etc...)</span>
+                <p>Patterns de conception implémentés (Singleton, Factory, Observer, Strategy, Adapter, Repository, MVC / MVVM / MVU,etc...)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -288,7 +289,7 @@
                   title="Gestion des règles métier"
                   aria-label="Gestion des règles métier (isolation des règles, possibilité de les faire évoluer sans impacter le reste du projet …)"
                 />
-                <span
+                <p
                   >Gestion des règles métier (isolation des règles, possibilité
                   de les faire évoluer sans impacter le reste du projet …)</span
                 >
@@ -305,7 +306,7 @@
                   title="Sécurisation des composants métier"
                   aria-label="Sécurisation des composants métier (gestion des permissions, validation des entrées …)"
                 />
-                <span
+                <p
                   >Sécurisation des composants métier (gestion des permissions,
                   validation des entrées …)</span
                 >
@@ -328,7 +329,7 @@
                   title="Méthodologie de gestion de projet"
                   aria-label="Méthodologie de gestion de projet utilisée (scrum, kanban, shape up, cycle en V …)"
                 />
-                <span
+                <p
                   >Méthodologie de gestion de projet utilisée (scrum, kanban,
                   shape up, cycle en V …)</span
                 >
@@ -345,7 +346,7 @@
                   title="Planification et suivi des tâches"
                   aria-label="Planification et suivi des tâches"
                 />
-                <span>Planification et suivi des tâches</span>
+                <p>Planification et suivi des tâches</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -359,7 +360,7 @@
                   title="Gestion des versions"
                   aria-label="Gestion des versions (Git ou autre)"
                 />
-                <span>Gestion des versions (Git ou autre)</span>
+                <p>Gestion des versions (Git ou autre)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -373,7 +374,7 @@
                   title="Collaboration et communication"
                   aria-label="Collaboration et communication au sein de l'équipe"
                 />
-                <span>Collaboration et communication au sein de l'équipe (Trello, Notion, Asana, Word, Slack, etc ...)</span>
+                <p>Collaboration et communication au sein de l'équipe (Trello, Notion, Asana, Word, Slack, etc ...)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -400,7 +401,7 @@
                   title="Analyse des besoins"
                   aria-label="Analyse détaillée des besoins fonctionnels et techniques"
                 />
-                <span>Analyse des besoins fonctionnels et techniques</span>
+                <p>Analyse des besoins fonctionnels et techniques</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -414,7 +415,7 @@
                   title="Cahier des charges"
                   aria-label="Cahier des charges et spécifications"
                 />
-                <span>Cahier des charges et spécifications</span>
+                <p>Cahier des charges et spécifications</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -434,7 +435,7 @@
                   title="Descritpion de l'architecture logicielle"
                   aria-label="Descritpion de l'architecture logicielle"
                 />
-                <span>Description de l'architecture logicielle utilisée</span>
+                <p>Description de l'architecture logicielle utilisée</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -448,7 +449,7 @@
                   title="Sécurité architecture"
                   aria-label="Aspects de sécurité dans l'architecture"
                 />
-                <span>Aspects de sécurité dans l'architecture</span>
+                <p>Aspects de sécurité dans l'architecture</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -468,7 +469,7 @@
                   title="Optimisation BD"
                   aria-label="Optimisation et indexation"
                 />
-                <span>Optimisation et indexation</span>
+                <p>Optimisation et indexation</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -482,7 +483,7 @@
                   title="Sécurité données"
                   aria-label="Sécurité et protection des données"
                 />
-                <span>Sécurité et protection des données</span>
+                <p>Sécurité et protection des données</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -502,7 +503,7 @@
                   title="ORM"
                   aria-label="Utilisation d'un ORM, explication de l'utilisation et implémentation"
                 />
-                <span
+                <p
                   >Utilisation d'un ORM, explication de l'utilisation et implémentation</span
                 >
 
@@ -518,7 +519,7 @@
                   title="Requêtes"
                   aria-label="Gestion des requêtes et transactions"
                 />
-                <span>Gestion des requêtes et transactions</span>
+                <p>Gestion des requêtes et transactions</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -532,7 +533,7 @@
                   title="Cache"
                   aria-label="Mise en cache et optimisation des performances"
                 />
-                <span>Mise en cache et optimisation des performances</span>
+                <p>Mise en cache et optimisation des performances</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -552,7 +553,7 @@
                   title="Documentation technique de l'API (Uniquement si votre projet est une API)"
                   aria-label="Documentation technique de l'API (Uniquement si votre projet est une API)"
                 />
-                <span>Documentation technique de l'API (Uniquement si votre projet est une API)</span>
+                <p>Documentation technique de l'API (Uniquement si votre projet est une API)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -566,7 +567,7 @@
                   title="Documentation code"
                   aria-label="Documentation du code source"
                 />
-                <span>Documentation du code source</span>
+                <p>Documentation du code source</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -580,7 +581,7 @@
                   title="Documentation déploiement"
                   aria-label="Documentation de déploiement"
                 />
-                <span>Documentation de déploiement</span>
+                <p>Documentation de déploiement</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -600,7 +601,7 @@
                   title="Environnement"
                   aria-label="Environnement de test"
                 />
-                <span>Environnement de test</span>
+                <p>Environnement de test</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -614,7 +615,7 @@
                   title="Configuration"
                   aria-label="Configuration et paramètres"
                 />
-                <span>Configuration et paramètres ( dev - test - prod optionnel )</span>
+                <p>Configuration et paramètres ( dev - test - prod optionnel )</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -628,7 +629,7 @@
                   title="Sécurité déploiement"
                   aria-label="Sécurité du déploiement"
                 />
-                <span>Sécurité du déploiement (Variables d'environnement, Accès SSH, Principe de moindre privilège, HTTPS en production, etc ...)</span>
+                <p>Sécurité du déploiement (Variables d'environnement, Accès SSH, Principe de moindre privilège, HTTPS en production, etc ...)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -654,7 +655,7 @@
                   title="Stratégie de tests"
                   aria-label="Stratégie de tests (unitaires, intégration, e2e)"
                 />
-                <span>Stratégie de tests (unitaires, intégration, e2e)</span>
+                <p>Stratégie de tests (unitaires, intégration, e2e)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -668,7 +669,7 @@
                   title="Plans de tests"
                   aria-label="Plans de tests réalisés"
                 />
-                <span>Plans de tests réalisés</span>
+                <p>Plans de tests réalisés</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -682,7 +683,7 @@
                   title="Outils de tests"
                   aria-label="Outils et frameworks de tests utilisés"
                 />
-                <span>Outils et frameworks de tests utilisés</span>
+                <p>Outils et frameworks de tests utilisés</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -696,7 +697,7 @@
                   title="Résultats des tests"
                   aria-label="Résultats des tests et corrections apportées"
                 />
-                <span>Résultats des tests et corrections apportées</span>
+                <p>Résultats des tests et corrections apportées</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -710,7 +711,7 @@
                   title="Tests de sécurité"
                   aria-label="Tests de sécurité et de performance"
                 />
-                <span>Tests de sécurité</span>
+                <p>Tests de sécurité</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -725,7 +726,7 @@
             <li>
               <label for="doc-tech">
                 <input type="checkbox" id="doc-tech" aria-label="Documentation technique" />
-                <span>Documentation technique</span>
+                <p>Documentation technique</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -734,7 +735,7 @@
             <li>
               <label for="doc-user">
                 <input type="checkbox" id="doc-user" aria-label="Documentation utilisateur" />
-                <span>Documentation utilisateur/utilisatrices (FAQ, "questions fréquentes", etc ...)</span>
+                <p>Documentation utilisateur/utilisatrices (FAQ, "questions fréquentes", etc ...)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -743,7 +744,7 @@
             <li>
               <label for="strat-deploiement">
                 <input type="checkbox" id="strat-deploiement" aria-label="Stratégie de déploiement" />
-                <span>Stratégie de déploiement</span>
+                <p>Stratégie de déploiement</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -756,7 +757,7 @@
                   id="config-env"
                   aria-label="Configuration des environnements"
                 />
-                <span>Configuration des environnements</span>
+                <p>Configuration des environnements</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -765,8 +766,8 @@
             <li>
               <label for="proc-sauvegarde">
                 <input type="checkbox" id="proc-sauvegarde" aria-label="Procédures de sauvegarde" />
-                <span>Procédures de sauvegarde et de restauration</span>
-                <span class="demo-badge"> Optionnel </span>
+                <p>Procédures de sauvegarde et de restauration</span>
+                <p class="demo-badge"> Optionnel </span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -785,7 +786,7 @@
                   title="CI/CD"
                   aria-label="Intégration continue / Déploiement continu (CI/CD)"
                 />
-                <span>Intégration continue / Déploiement continu (CI/CD)</span>
+                <p>Intégration continue / Déploiement continu (CI/CD)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -799,7 +800,7 @@
                   title="Automatisation"
                   aria-label="Automatisation des processus"
                 />
-                <span>Automatisation des processus (Lancer les tests à chaque push, Dependabot, Déployer sur un serveur, Générer un changelog)</span>
+                <p>Automatisation des processus (Lancer les tests à chaque push, Dependabot, Déployer sur un serveur, Générer un changelog)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -813,7 +814,7 @@
                   title="Monitoring"
                   aria-label="Monitoring et alerting"
                 />
-                <span>Monitoring et alerting</span>
+                <p>Monitoring et alerting</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -827,7 +828,7 @@
                   title="Gestion des versions"
                   aria-label="Gestion des versions et des releases"
                 />
-                <span>Gestion des versions et des releases</span>
+                <p>Gestion des versions et des releases</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -841,7 +842,7 @@
                   title="Sécurisation du pipeline"
                   aria-label="Sécurisation du pipeline de déploiement"
                 />
-                <span>Sécurisation du pipeline de déploiement</span>
+                <p>Sécurisation du pipeline de déploiement</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -865,8 +866,8 @@
                   title="Respect des standards de code"
                   aria-label="Respect des standards de code"
                 />
-                <span>Respect des standards de code</span>
-                <span class="demo-badge">Dossier projet</span>
+                <p>Respect des standards de code</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -879,8 +880,8 @@
                   title="Gestion des erreurs"
                   aria-label="Gestion des erreurs et exceptions"
                 />
-                <span>Gestion des erreurs et exceptions</span>
-                <span class="demo-badge">Dossier projet</span>
+                <p>Gestion des erreurs et exceptions</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -893,10 +894,10 @@
                   title="Protection contre les vulnérabilités"
                   aria-label="Protection contre les vulnérabilités courantes (OWASP)"
                 />
-                <span
+                <p
                   >Protection contre les vulnérabilités courantes (OWASP)</span
                 >
-                <span class="demo-badge">Dossier projet</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -909,7 +910,7 @@
                   title="Journalisation"
                   aria-label="Journalisation et audit"
                 />
-                <span>Journalisation et audit</span>
+                <p>Journalisation et audit</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -929,8 +930,8 @@
                   title="Clarté du rapport"
                   aria-label="Clarté et structure du rapport"
                 />
-                <span>Clarté et structure du rapport</span>
-                <span class="demo-badge">Dossier projet</span>
+                <p>Clarté et structure du rapport</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -943,11 +944,11 @@
                   title="Illustrations"
                   aria-label="Illustrations pertinentes (captures d'écran, diagrammes)"
                 />
-                <span
+                <p
                   >Illustrations pertinentes (captures d'écran,
                   diagrammes)</span
                 >
-                <span class="demo-badge">Dossier projet</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -960,8 +961,8 @@
                   title="Glossaire"
                   aria-label="Glossaire des termes techniques"
                 />
-                <span>Glossaire des termes techniques</span>
-                <span class="demo-badge">Dossier projet</span>
+                <p>Glossaire des termes techniques</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -974,7 +975,7 @@
                   title="Démonstration"
                   aria-label="Démonstration fonctionnelle prévue ou vidéo"
                 />
-                <span>Démonstration fonctionnelle prévue ou vidéo</span>
+                <p>Démonstration fonctionnelle prévue ou vidéo</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -994,8 +995,8 @@
                   title="Inclure un résumé en anglais"
                   aria-label="Inclure un résumé en anglais"
                 />
-                <span>Inclure un résumé en anglais</span>
-                <span class="demo-badge">Dossier projet</span>
+                <p>Inclure un résumé en anglais</span>
+                <p class="demo-badge">Dossier projet</span>
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
               </label>
@@ -1014,7 +1015,7 @@
                   title="Validation des besoins"
                   aria-label="Validation des besoins avec les parties prenantes (client/clientes - dev - produit …)"
                 />
-                <span
+                <p
                   >Validation des besoins avec les parties prenantes
                   (client/clientes - dev - produit …)</span
                 >
@@ -1037,7 +1038,7 @@
                   title="Organisation en couches"
                   aria-label="Organisation en couches de l'application"
                 />
-                <span>Organisation en couches de l'application</span>
+                <p>Organisation en couches de l'application</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1051,7 +1052,7 @@
                   title="Mécanismes d'intégration"
                   aria-label="Mécanismes d'intégration et d'interopérabilité (api rest, soap, graphql etc … format json, xml etc …)"
                 />
-                <span
+                <p
                   >Mécanismes d'intégration et d'interopérabilité (api rest,
                   soap, graphql etc … format json, xml etc …)</span
                 >
@@ -1074,7 +1075,7 @@
                   title="Modèle conceptuel"
                   aria-label="Modèle conceptuel de données (MCD)"
                 />
-                <span>Modèle conceptuel de données (MCD)</span>
+                <p>Modèle conceptuel de données (MCD)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1088,7 +1089,7 @@
                   title="Modèle physique"
                   aria-label="Modèle physique de données (MPD)"
                 />
-                <span>Modèle physique de données (MPD)</span>
+                <p>Modèle physique de données (MPD)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1102,7 +1103,7 @@
                   title="Modèle logique"
                   aria-label="Modèle logique de données (MLD)"
                 />
-                <span>Modèle logique de données (MLD)</span>
+                <p>Modèle logique de données (MLD)</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1116,7 +1117,7 @@
                   title="Scripts de création"
                   aria-label="Scripts de création de la base de données"
                 />
-                <span>Scripts de création de la base de données</span>
+                <p>Scripts de création de la base de données</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1130,7 +1131,7 @@
                   title="Sécurisation des accès"
                   aria-label="Sécurisation des accès à la base de données"
                 />
-                <span>Sécurisation des accès à la base de données</span>
+                <p>Sécurisation des accès à la base de données</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1150,7 +1151,7 @@
                   title="Stratégie d'accès"
                   aria-label="Stratégie d'accès aux données (ORM, DAO, Repository)"
                 />
-                <span
+                <p
                   >Stratégie d'accès aux données (ORM, DAO, Repository)</span
                 >
 
@@ -1166,7 +1167,7 @@
                   title="Requêtes SQL"
                   aria-label="Implémentation des requêtes SQL"
                 />
-                <span>Implémentation des requêtes SQL</span>
+                <p>Implémentation des requêtes SQL</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
@@ -1180,7 +1181,7 @@
                   title="Intégration NoSQL"
                   aria-label="Intégration éventuelle de bases NoSQL"
                 />
-                <span>Intégration de bases NoSQL</span>
+                <p>Intégration de bases NoSQL</span>
 
                 <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
 
