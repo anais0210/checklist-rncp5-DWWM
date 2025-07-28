@@ -41,10 +41,10 @@ export class ExportManager implements IExportManager {
                 { width: 25 }  
             ];
             
-            window.XLSX.utils.book_append_sheet(wb, ws, 'Checklist CDA');
+            window.XLSX.utils.book_append_sheet(wb, ws, 'Checklist DWWM');
             
             const date: string = new Date().toISOString().split('T')[0];
-            let fileName: string = `checklist-cda-${date}.xlsx`;
+            let fileName: string = `checklist-DWWM-${date}.xlsx`;
             
             if (formattedProjectName) {
                 fileName = `checklist-${formattedProjectName}-${date}.xlsx`;
@@ -65,7 +65,6 @@ export class ExportManager implements IExportManager {
         data.push([
             'Statut',
             'Description',
-            'Badge',
             'Bloc',
             'Section',
             'Notes'
@@ -75,8 +74,8 @@ export class ExportManager implements IExportManager {
         const version: string = versionElement ? versionElement.textContent || '' : '';
         
         const headerTitle: string = projectName 
-            ? `Checklist CDA 6 - ${projectName} - ${version}`
-            : `Checklist CDA 6 - ${version}`;
+            ? `Checklist DWWM - ${projectName} - ${version}`
+            : `Checklist DWWM - ${version}`;
             
         data.push([
             '',
@@ -100,14 +99,12 @@ export class ExportManager implements IExportManager {
         
         checklistItems.forEach((item: Element): void => {
             const checkbox: HTMLInputElement | null = item.querySelector('input[type="checkbox"]');
-            const description: Element | null = item.querySelector('span:not(.demo-badge)');
-            const badge: Element | null = item.querySelector('.demo-badge');
+            const description: Element | null = item.querySelector('p:not(.demo-badge)');
             const notes: HTMLTextAreaElement | null = item.querySelector('label textarea');
             
             if (checkbox && description) {
                 const isChecked: boolean = checkbox.checked;
                 const descriptionText: string = description.textContent?.trim() || '';
-                const badgeText: string = badge ? badge.textContent?.trim() || '' : '';
                 const notesText: string = notes ? notes.value.trim() : '';
                 
                 const block: Element | null = item.closest('.block');
@@ -119,7 +116,6 @@ export class ExportManager implements IExportManager {
                 data.push([
                     isChecked ? '✓' : '☐',
                     descriptionText,
-                    badgeText,
                     blockTitle,
                     sectionTitle,
                     notesText
