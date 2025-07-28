@@ -106,6 +106,84 @@ body {
     text-shadow: 0 1px 2px rgb(0 0 0 / 10%);
 }
 
+.demo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-left: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--gradient-end));
+    color: #FFF;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+    box-shadow: 0 2px 4px rgb(247 168 184 / 25%);
+    transition: all 0.3s ease;
+}
+
+.demo-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgb(247 168 184 / 35%);
+}
+
+/* Styles de badges spécialisés par type */
+.demo-badge.badge-frontend {
+    background: linear-gradient(135deg, var(--primary-color), var(--peach-accent));
+}
+
+.demo-badge.badge-backend {
+    background: linear-gradient(135deg, var(--gradient-end), var(--coral-light));
+}
+
+.demo-badge.badge-dossier {
+    background: linear-gradient(135deg, var(--success-color), var(--primary-hover));
+    font-weight: 800;
+}
+
+.demo-badge.badge-presentation {
+    background: linear-gradient(135deg, var(--peach-accent), var(--coral-light));
+}
+
+.demo-badge.badge-entretien {
+    background: linear-gradient(135deg, var(--primary-hover), var(--success-color));
+}
+
+.demo-badge.badge-questionnaire {
+    background: linear-gradient(135deg, var(--coral-light), var(--peach-accent));
+}
+
+.demo-badge.badge-obligatoire {
+    background: linear-gradient(135deg, #E891A0, #F7A8B8);
+    animation: pulse-subtle 2s infinite;
+    font-weight: 800;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.demo-badge.badge-optionnel {
+    background: linear-gradient(135deg, var(--peach-accent), var(--coral-light));
+    opacity: 0.85;
+    font-style: italic;
+}
+
+@keyframes pulse-subtle {
+    0%, 100% { 
+        box-shadow: 0 2px 4px rgb(247 168 184 / 25%);
+    }
+    50% { 
+        box-shadow: 0 4px 8px rgb(247 168 184 / 40%);
+    }
+}
+
+.checklist span:not(.demo-badge) {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    display: inline-block;
+    margin-left: 8px;
+}
+
+
 .project-name-input {
     flex: 1;
     min-width: 300px;
@@ -781,14 +859,14 @@ main {
   border-radius: 12px;
   padding: 24px;
   margin: 24px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
 }
 
 .info-content h3 {
   color: #2563eb;
   font-size: 18px;
   font-weight: 600;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -805,7 +883,7 @@ main {
   color: #475569;
   font-size: 14px;
   line-height: 1.5;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgb(0 0 0 / 5%);
 }
 
 .info-list li:last-child {
@@ -821,7 +899,7 @@ main {
 .github-link-container {
   margin-top: 16px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255 255 255 / 10%);
   text-align: center;
 }
 
@@ -839,18 +917,18 @@ main {
 
 .github-link:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255 255 255 / 10%);
   transform: translateY(-1px);
 }
 
 .github-icon {
   width: 20px;
   height: 20px;
-  fill: currentColor;
+  fill: currentcolor;
 }
 
 /* Responsive pour le panneau d'information */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .info-panel {
     padding: 16px;
     margin: 16px 0;

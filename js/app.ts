@@ -4,6 +4,7 @@ import { NotesManager } from './notes-manager';
 import { SearchManager } from './search-manager';
 import { ResetManager } from './reset-manager';
 import { ProjectNameManager } from './project-name-manager';
+import { BadgeManager } from './badge-manager';
 import type { App as IApp, Config } from './types';
 
 class App implements IApp {
@@ -13,6 +14,7 @@ class App implements IApp {
     public readonly searchManager: SearchManager;
     public readonly resetManager: ResetManager;
     public readonly projectNameManager: ProjectNameManager;
+    public readonly badgeManager: BadgeManager;
 
     constructor() {
         console.log('App initialisée');
@@ -22,6 +24,7 @@ class App implements IApp {
         this.searchManager = new SearchManager();
         this.resetManager = new ResetManager();
         this.projectNameManager = new ProjectNameManager();
+        this.badgeManager = new BadgeManager();
         this.loadVersion();
         
         window.app = this;

@@ -42,10 +42,15 @@ export interface App {
     searchManager: SearchManager;
     resetManager: ResetManager;
     projectNameManager: ProjectNameManager;
+    badgeManager: BadgeManager;
     loadVersion(): Promise<void>;
 }
 
 // Forward declarations pour les classes
+export interface BadgeManager {
+    refresh(): void;
+}
+
 export interface ProgressManager {
     updateProgress(): void;
     calculateProgressByBadge(badgeText: string): number;
