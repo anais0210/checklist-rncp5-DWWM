@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Checklist du rapport de projet - Développeur·euse web et web mobile 
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script type="module" src="js/app.ts"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Checklist du rapport de projet</h1>
+        <p class="subtitle">
+          Checklist du rapport de projet - Développeur·euse web et web mobile 
+        </p>
+        <p class="description">
+          Cette checklist vous permettra de vérifier que votre rapport de projet
+          couvre bien l'ensemble des compétences évaluées pour l'obtention du
+          titre RNCP5.
+        </p>
+        <p class="description-bold">
+          Hors page de garde, sommaire et annexes, le dossier projet comporte entre 30 et 50 pages au maximum, schémas et illustrations compris. Les annexes comportent 30 pages au maximum.
+        </p> 
+        <small class="version-tag" id="version-number"></small>
+      </div>
+    </header>
+    <div class="project-name-container">
+      <label for="project-name" class="project-name-label">Nom du projet :</label>
+      <input 
+        type="text" 
+        id="project-name" 
+        placeholder="Ex: Le nom de mon projet - CDA 2025 - mon prénom et mon nom"
+        class="project-name-input"
+      />
+    </div>
+    <div class="search-container container">
+      <div class="search-box">
+        <label for="search-input" class="sr-only">Rechercher dans les descriptions</label>
+        <input type="text" id="search-input" placeholder=" Rechercher dans les descriptions..." />
+        <button id="clear-search" class="clear-search-btn">✕</button>
+      </div>
+    </div>
+    <div class="progress-sticky">
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+          </div>
+          <span id="progress-text">0%</span>
+        </div>
+    </div>
+    <main class="container">
+      <section class="block" id="block1">
+        <h2 class="block-title">
+          Bloc 1 - Développer une application sécurisée
+        </h2>
+
+        <div class="section">
+          <h3>Installation et configuration de l'environnement</h3>
+          <ul class="checklist">
+            <li>
+              <label for="env-dev">
+                <input
+                  type="checkbox"
+                  id="env-dev"
+                  title="Description de l'environnement de développement utilisé"
+                  aria-label="Description de l'environnement de développement utilisé"
+                />
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="choix-tech">
+                <input
+                  type="checkbox"
+                  id="choix-tech"
+                  title="Explication des choix techniques"
+                  aria-label="Explication des choix techniques (IDE, frameworks, librairies, outils)"
+                />
+                <span
+                  >Explication des choix techniques (IDE, frameworks,
+                  librairies, outils)</span
+                >
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+              </label>
+            </li>
+            <li>
+              <label for="process-install">
+                <input
+                  type="checkbox"
+                  id="process-install"
+                  title="Processus d'installation et de configuration"
+                  aria-label="Processus d'installation et de configuration (Readme, Documentation Notion/Word/etc …)"
+                />
+                <span
+                  >Processus d'installation et de configuration (Readme,
+                  Documentation Notion/Word/etc …)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+           
+            </li>
+            <li>
+              <label for="containerisation">
+                <input
+                  type="checkbox"
+                  id="containerisation"
+                  title="Containeuriser l'application"
+                  aria-label="Containeuriser l'application (Docker, Podman, etc.)"
+                />
+                <span
+                  >Containeuriser l'application (Docker, Podman, etc.)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+           
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Développement d'interfaces utilisateur.ices</h3>
+          <ul class="checklist">
+            <li>
+              <label for="charte-graphique">
+                <input
+                  type="checkbox"
+                  id="charte-graphique"
+                  title="Création d'une charte graphique"
+                  aria-label="Création d'une charte graphique"
+                />
+                <span>Création d'une charte graphique</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+                <label for="a11y-charte">
+                  <input
+                    type="checkbox"
+                    id="a11y-charte"
+                    title="Charte graphique accessible"
+                    aria-label="Charte graphique accessible"
+                  />
+                  <span>Charte graphique accessible</span>
+  
+                  <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+                  
+                </label>
+              </li>
+              <li>
+              <label for="maquettes">
+                <input
+                  type="checkbox"
+                  id="maquettes"
+                  title="Présentation des maquettes et wireframes"
+                  aria-label="Présentation des maquettes et wireframes"
+                />
+                <span>Présentation des maquettes et wireframes</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="ergonomie">
+                <input
+                  type="checkbox"
+                  id="ergonomie"
+                  title="Explication des choix ergonomiques"
+                  aria-label="Explication des choix ergonomiques et d'UX/UI"
+                />
+                <span>Explication des choix ergonomiques et d'UX/UI</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="tech-front">
+                <input
+                  type="checkbox"
+                  id="tech-front"
+                  title="Description des technologies front-end"
+                  aria-label="Description des technologies front-end utilisées (HTML, CSS, JavaScript, frameworks)"
+                />
+                <span
+                  >Description des technologies front-end utilisées (HTML, CSS,
+                  JavaScript, frameworks)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="responsive">
+                <input
+                  type="checkbox"
+                  id="responsive"
+                  title="Adaptation responsive/mobile"
+                  aria-label="Adaptation responsive/mobile des interfaces sur maquettes"
+                />
+                <span
+                  >Adaptation responsive/mobile des interfaces sur
+                  maquettes</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="accessibilite">
+                <input
+                  type="checkbox"
+                  id="accessibilite"
+                  title="Mise en œuvre des bonnes pratiques d'accessibilité"
+                  aria-label="Mise en œuvre des bonnes pratiques d'accessibilité (couleur / label / zone cliquable etc …) sur maquettes"
+                />
+                <span
+                  >Mise en œuvre des bonnes pratiques d'accessibilité (couleur /
+                  label / zone cliquable etc …) sur maquettes</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Développement des composants métier</h3>
+          <ul class="checklist">
+            <li>
+              <label for="archi-composants">
+                <input
+                  type="checkbox"
+                  id="archi-composants"
+                  title="Architecture des composants métier"
+                  aria-label="Architecture des composants métier développés (Structure, Découpage …)"
+                />
+                <span
+                  >Architecture des composants (Structure modulable,
+                  découpage fonctionnel, etc...)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="patterns">
+                <input
+                  type="checkbox"
+                  id="patterns"
+                  title="Patterns de conception"
+                  aria-label="Patterns de conception implémentés"
+                />
+                <span>Patterns de conception implémentés (Singleton, Factory, Observer, Strategy, Adapter, Repository, MVC / MVVM / MVU,etc...)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="regles-metier">
+                <input
+                  type="checkbox"
+                  id="regles-metier"
+                  title="Gestion des règles métier"
+                  aria-label="Gestion des règles métier (isolation des règles, possibilité de les faire évoluer sans impacter le reste du projet …)"
+                />
+                <span
+                  >Gestion des règles métier (isolation des règles, possibilité
+                  de les faire évoluer sans impacter le reste du projet …)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="securite-composants">
+                <input
+                  type="checkbox"
+                  id="securite-composants"
+                  title="Sécurisation des composants métier"
+                  aria-label="Sécurisation des composants métier (gestion des permissions, validation des entrées …)"
+                />
+                <span
+                  >Sécurisation des composants métier (gestion des permissions,
+                  validation des entrées …)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Gestion de projet</h3>
+          <ul class="checklist">
+            <li>
+              <label for="methodologie">
+                <input
+                  type="checkbox"
+                  id="methodologie"
+                  title="Méthodologie de gestion de projet"
+                  aria-label="Méthodologie de gestion de projet utilisée (scrum, kanban, shape up, cycle en V …)"
+                />
+                <span
+                  >Méthodologie de gestion de projet utilisée (scrum, kanban,
+                  shape up, cycle en V …)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="planification">
+                <input
+                  type="checkbox"
+                  id="planification"
+                  title="Planification et suivi des tâches"
+                  aria-label="Planification et suivi des tâches"
+                />
+                <span>Planification et suivi des tâches</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="versions">
+                <input
+                  type="checkbox"
+                  id="versions"
+                  title="Gestion des versions"
+                  aria-label="Gestion des versions (Git ou autre)"
+                />
+                <span>Gestion des versions (Git ou autre)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="collaboration">
+                <input
+                  type="checkbox"
+                  id="collaboration"
+                  title="Collaboration et communication"
+                  aria-label="Collaboration et communication au sein de l'équipe"
+                />
+                <span>Collaboration et communication au sein de l'équipe (Trello, Notion, Asana, Word, Slack, etc ...)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="block2">
+        <h2 class="block-title">
+          Bloc 2 - Concevoir et développer une application sécurisée organisée
+          en couches
+        </h2>
+
+        <div class="section">
+          <h3>Analyse des besoins</h3>
+          <ul class="checklist">
+            <li>
+              <label for="analyse-besoins">
+                <input
+                  type="checkbox"
+                  id="analyse-besoins"
+                  title="Analyse des besoins"
+                  aria-label="Analyse détaillée des besoins fonctionnels et techniques"
+                />
+                <span>Analyse des besoins fonctionnels et techniques</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="cahier-charges">
+                <input
+                  type="checkbox"
+                  id="cahier-charges"
+                  title="Cahier des charges"
+                  aria-label="Cahier des charges et spécifications"
+                />
+                <span>Cahier des charges et spécifications</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Architecture logicielle</h3>
+          <ul class="checklist">
+            <li>
+              <label for="patterns-archi">
+                <input
+                  type="checkbox"
+                  id="patterns-archi"
+                  title="Descritpion de l'architecture logicielle"
+                  aria-label="Descritpion de l'architecture logicielle"
+                />
+                <span>Description de l'architecture logicielle utilisée</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="securite-archi">
+                <input
+                  type="checkbox"
+                  id="securite-archi"
+                  title="Sécurité architecture"
+                  aria-label="Aspects de sécurité dans l'architecture"
+                />
+                <span>Aspects de sécurité dans l'architecture</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Conception de la base de données</h3>
+          <ul class="checklist">
+            <li>
+              <label for="optimisation-bd">
+                <input
+                  type="checkbox"
+                  id="optimisation-bd"
+                  title="Optimisation BD"
+                  aria-label="Optimisation et indexation"
+                />
+                <span>Optimisation et indexation</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="securite-donnees">
+                <input
+                  type="checkbox"
+                  id="securite-donnees"
+                  title="Sécurité données"
+                  aria-label="Sécurité et protection des données"
+                />
+                <span>Sécurité et protection des données</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Composants d'accès aux données</h3>
+          <ul class="checklist">
+            <li>
+              <label for="orm">
+                <input
+                  type="checkbox"
+                  id="orm"
+                  title="ORM"
+                  aria-label="Utilisation d'un ORM, explication de l'utilisation et implémentation"
+                />
+                <span
+                  >Utilisation d'un ORM, explication de l'utilisation et implémentation</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="requetes">
+                <input
+                  type="checkbox"
+                  id="requetes"
+                  title="Requêtes"
+                  aria-label="Gestion des requêtes et transactions"
+                />
+                <span>Gestion des requêtes et transactions</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="cache">
+                <input
+                  type="checkbox"
+                  id="cache"
+                  title="Cache"
+                  aria-label="Mise en cache et optimisation des performances"
+                />
+                <span>Mise en cache et optimisation des performances</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Documentation technique</h3>
+          <ul class="checklist">
+            <li>
+              <label for="doc-api">
+                <input
+                  type="checkbox"
+                  id="doc-api"
+                  title="Documentation technique de l'API (Uniquement si votre projet est une API)"
+                  aria-label="Documentation technique de l'API (Uniquement si votre projet est une API)"
+                />
+                <span>Documentation technique de l'API (Uniquement si votre projet est une API)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="doc-code">
+                <input
+                  type="checkbox"
+                  id="doc-code"
+                  title="Documentation code"
+                  aria-label="Documentation du code source"
+                />
+                <span>Documentation du code source</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="doc-deploiement">
+                <input
+                  type="checkbox"
+                  id="doc-deploiement"
+                  title="Documentation déploiement"
+                  aria-label="Documentation de déploiement"
+                />
+                <span>Documentation de déploiement</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Stratégie de déploiement</h3>
+          <ul class="checklist">
+            <li>
+              <label for="environnement">
+                <input
+                  type="checkbox"
+                  id="environnement"
+                  title="Environnement"
+                  aria-label="Environnement de test"
+                />
+                <span>Environnement de test</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="configuration">
+                <input
+                  type="checkbox"
+                  id="configuration"
+                  title="Configuration"
+                  aria-label="Configuration et paramètres"
+                />
+                <span>Configuration et paramètres ( dev - test - prod optionnel )</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="securite-deploiement">
+                <input
+                  type="checkbox"
+                  id="securite-deploiement"
+                  title="Sécurité déploiement"
+                  aria-label="Sécurité du déploiement"
+                />
+                <span>Sécurité du déploiement (Variables d'environnement, Accès SSH, Principe de moindre privilège, HTTPS en production, etc ...)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="block3">
+        <h2 class="block-title">
+          Bloc 3 - Préparer le déploiement d'une application sécurisée
+        </h2>
+
+        <div class="section">
+          <h3>Tests de l'application</h3>
+          <ul class="checklist">
+            <li>
+              <label for="strategie-tests">
+                <input
+                  type="checkbox"
+                  id="strategie-tests"
+                  title="Stratégie de tests"
+                  aria-label="Stratégie de tests (unitaires, intégration, e2e)"
+                />
+                <span>Stratégie de tests (unitaires, intégration, e2e)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="plans-tests">
+                <input
+                  type="checkbox"
+                  id="plans-tests"
+                  title="Plans de tests"
+                  aria-label="Plans de tests réalisés"
+                />
+                <span>Plans de tests réalisés</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="outils-tests">
+                <input
+                  type="checkbox"
+                  id="outils-tests"
+                  title="Outils de tests"
+                  aria-label="Outils et frameworks de tests utilisés"
+                />
+                <span>Outils et frameworks de tests utilisés</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="resultats-tests">
+                <input
+                  type="checkbox"
+                  id="resultats-tests"
+                  title="Résultats des tests"
+                  aria-label="Résultats des tests et corrections apportées"
+                />
+                <span>Résultats des tests et corrections apportées</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="tests-securite">
+                <input
+                  type="checkbox"
+                  id="tests-securite"
+                  title="Tests de sécurité"
+                  aria-label="Tests de sécurité et de performance"
+                />
+                <span>Tests de sécurité</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Documentation et déploiement</h3>
+          <ul class="checklist">
+            <li>
+              <label for="doc-tech">
+                <input type="checkbox" id="doc-tech" aria-label="Documentation technique" />
+                <span>Documentation technique</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="doc-user">
+                <input type="checkbox" id="doc-user" aria-label="Documentation utilisateur" />
+                <span>Documentation utilisateur/utilisatrices (FAQ, "questions fréquentes", etc ...)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="strat-deploiement">
+                <input type="checkbox" id="strat-deploiement" aria-label="Stratégie de déploiement" />
+                <span>Stratégie de déploiement</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="config-env">
+                <input
+                  type="checkbox"
+                  id="config-env"
+                  aria-label="Configuration des environnements"
+                />
+                <span>Configuration des environnements</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="proc-sauvegarde">
+                <input type="checkbox" id="proc-sauvegarde" aria-label="Procédures de sauvegarde" />
+                <span>Procédures de sauvegarde et de restauration</span>
+                <span class="demo-badge"> Optionnel </span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Démarche DevOps</h3>
+          <ul class="checklist">
+            <li>
+              <label for="cicd">
+                <input
+                  type="checkbox"
+                  id="cicd"
+                  title="CI/CD"
+                  aria-label="Intégration continue / Déploiement continu (CI/CD)"
+                />
+                <span>Intégration continue / Déploiement continu (CI/CD)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="automatisation">
+                <input
+                  type="checkbox"
+                  id="automatisation"
+                  title="Automatisation"
+                  aria-label="Automatisation des processus"
+                />
+                <span>Automatisation des processus (Lancer les tests à chaque push, Dependabot, Déployer sur un serveur, Générer un changelog)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="monitoring">
+                <input
+                  type="checkbox"
+                  id="monitoring"
+                  title="Monitoring"
+                  aria-label="Monitoring et alerting"
+                />
+                <span>Monitoring et alerting</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="versions-releases">
+                <input
+                  type="checkbox"
+                  id="versions-releases"
+                  title="Gestion des versions"
+                  aria-label="Gestion des versions et des releases"
+                />
+                <span>Gestion des versions et des releases</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="securite-pipeline">
+                <input
+                  type="checkbox"
+                  id="securite-pipeline"
+                  title="Sécurisation du pipeline"
+                  aria-label="Sécurisation du pipeline de déploiement"
+                />
+                <span>Sécurisation du pipeline de déploiement</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="transversal">
+        <h2 class="block-title">Éléments transversaux à vérifier</h2>
+
+        <div class="section">
+          <h3>Qualité du code et sécurité</h3>
+          <ul class="checklist">
+            <li>
+              <label for="standards">
+                <input
+                  type="checkbox"
+                  id="standards"
+                  title="Respect des standards de code"
+                  aria-label="Respect des standards de code"
+                />
+                <span>Respect des standards de code</span>
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="erreurs">
+                <input
+                  type="checkbox"
+                  id="erreurs"
+                  title="Gestion des erreurs"
+                  aria-label="Gestion des erreurs et exceptions"
+                />
+                <span>Gestion des erreurs et exceptions</span>
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="vulnerabilites">
+                <input
+                  type="checkbox"
+                  id="vulnerabilites"
+                  title="Protection contre les vulnérabilités"
+                  aria-label="Protection contre les vulnérabilités courantes (OWASP)"
+                />
+                <span
+                  >Protection contre les vulnérabilités courantes (OWASP)</span
+                >
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="journalisation">
+                <input
+                  type="checkbox"
+                  id="journalisation"
+                  title="Journalisation"
+                  aria-label="Journalisation et audit"
+                />
+                <span>Journalisation et audit</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Documentation et présentation</h3>
+          <ul class="checklist">
+            <li>
+              <label for="clarte">
+                <input
+                  type="checkbox"
+                  id="clarte"
+                  title="Clarté du rapport"
+                  aria-label="Clarté et structure du rapport"
+                />
+                <span>Clarté et structure du rapport</span>
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="illustrations">
+                <input
+                  type="checkbox"
+                  id="illustrations"
+                  title="Illustrations"
+                  aria-label="Illustrations pertinentes (captures d'écran, diagrammes)"
+                />
+                <span
+                  >Illustrations pertinentes (captures d'écran,
+                  diagrammes)</span
+                >
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="glossaire">
+                <input
+                  type="checkbox"
+                  id="glossaire"
+                  title="Glossaire"
+                  aria-label="Glossaire des termes techniques"
+                />
+                <span>Glossaire des termes techniques</span>
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="demo">
+                <input
+                  type="checkbox"
+                  id="demo"
+                  title="Démonstration"
+                  aria-label="Démonstration fonctionnelle prévue ou vidéo"
+                />
+                <span>Démonstration fonctionnelle prévue ou vidéo</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Compétences en anglais</h3>
+          <ul class="checklist">
+            <li>
+              <label for="resume-en">
+                <input
+                  type="checkbox"
+                  id="resume-en"
+                  title="Inclure un résumé en anglais"
+                  aria-label="Inclure un résumé en anglais"
+                />
+                <span>Inclure un résumé en anglais</span>
+                <span class="demo-badge">Dossier projet</span>
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Validation des besoins</h3>
+          <ul class="checklist">
+            <li>
+              <label for="validation-besoins">
+                <input
+                  type="checkbox"
+                  id="validation-besoins"
+                  title="Validation des besoins"
+                  aria-label="Validation des besoins avec les parties prenantes (client/clientes - dev - produit …)"
+                />
+                <span
+                  >Validation des besoins avec les parties prenantes
+                  (client/clientes - dev - produit …)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Organisation et architecture</h3>
+          <ul class="checklist">
+            <li>
+              <label for="organisation-couches">
+                <input
+                  type="checkbox"
+                  id="organisation-couches"
+                  title="Organisation en couches"
+                  aria-label="Organisation en couches de l'application"
+                />
+                <span>Organisation en couches de l'application</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="integration-api">
+                <input
+                  type="checkbox"
+                  id="integration-api"
+                  title="Mécanismes d'intégration"
+                  aria-label="Mécanismes d'intégration et d'interopérabilité (api rest, soap, graphql etc … format json, xml etc …)"
+                />
+                <span
+                  >Mécanismes d'intégration et d'interopérabilité (api rest,
+                  soap, graphql etc … format json, xml etc …)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Modèles de données</h3>
+          <ul class="checklist">
+            <li>
+              <label for="mcd">
+                <input
+                  type="checkbox"
+                  id="mcd"
+                  title="Modèle conceptuel"
+                  aria-label="Modèle conceptuel de données (MCD)"
+                />
+                <span>Modèle conceptuel de données (MCD)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="mpd">
+                <input
+                  type="checkbox"
+                  id="mpd"
+                  title="Modèle physique"
+                  aria-label="Modèle physique de données (MPD)"
+                />
+                <span>Modèle physique de données (MPD)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="mld">
+                <input
+                  type="checkbox"
+                  id="mld"
+                  title="Modèle logique"
+                  aria-label="Modèle logique de données (MLD)"
+                />
+                <span>Modèle logique de données (MLD)</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="scripts-bd">
+                <input
+                  type="checkbox"
+                  id="scripts-bd"
+                  title="Scripts de création"
+                  aria-label="Scripts de création de la base de données"
+                />
+                <span>Scripts de création de la base de données</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="securite-acces">
+                <input
+                  type="checkbox"
+                  id="securite-acces"
+                  title="Sécurisation des accès"
+                  aria-label="Sécurisation des accès à la base de données"
+                />
+                <span>Sécurisation des accès à la base de données</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Accès aux données</h3>
+          <ul class="checklist">
+            <li>
+              <label for="strategie-acces">
+                <input
+                  type="checkbox"
+                  id="strategie-acces"
+                  title="Stratégie d'accès"
+                  aria-label="Stratégie d'accès aux données (ORM, DAO, Repository)"
+                />
+                <span
+                  >Stratégie d'accès aux données (ORM, DAO, Repository)</span
+                >
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="requetes-sql">
+                <input
+                  type="checkbox"
+                  id="requetes-sql"
+                  title="Requêtes SQL"
+                  aria-label="Implémentation des requêtes SQL"
+                />
+                <span>Implémentation des requêtes SQL</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+            <li>
+              <label for="nosql">
+                <input
+                  type="checkbox"
+                  id="nosql"
+                  title="Intégration NoSQL"
+                  aria-label="Intégration éventuelle de bases NoSQL"
+                />
+                <span>Intégration de bases NoSQL</span>
+
+                <textarea placeholder="Ajoutez vos notes, liens, références..."></textarea>
+
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="export-import-container">
+          <button class="export-btn">Exporter en Excel</button>
+          <button class="reset-btn" id="reset-all-btn">Tout réinitialiser</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

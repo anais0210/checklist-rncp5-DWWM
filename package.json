@@ -1,0 +1,45 @@
+{
+  "name": "checklist-rncp5-dwwm",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server . -p 3000 -o --cors",
+    "dev": "http-server . -p 3000 -o --cors -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint:html": "htmlhint \"**/*.html\"",
+    "lint:css": "stylelint \"**/*.css\" --fix",
+    "lint:ts": "tsc --noEmit",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:ts",
+    "lint:fix": "npm run lint:css",
+    "test:a11y": "node test-a11y.js",
+    "deploy": "vercel --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anais0210/checklist-rncp5-DWWM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anais0210/checklist-rncp5-DWWM/issues"
+  },
+  "homepage": "https://github.com/anais0210/checklist-rncp5-DWWM#readme",
+  "description": "Checklist pour le rapport de projet CDA",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.8.2",
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^24.1.0",
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recommended": "^14.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
