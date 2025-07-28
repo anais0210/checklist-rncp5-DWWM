@@ -1,6 +1,6 @@
 # Checklist RNCP5 DWWM
 
-Ce projet est une checklist pour le RNCP5 DWWM. Il permet de suivre et valider les différentes étapes du parcours.
+Ce projet est une checklist pour le RNCP5 DWWM. Il permet de suivre et v1lider les différentes étapes du parcours.
 
 ## ✨ Fonctionnalités
 
@@ -75,6 +75,7 @@ L'application sera accessible sur `http://localhost:3000`
 | `npm run lint:html` | Lint HTML avec HTMLHint |
 | `npm run lint:css` | Lint CSS avec Stylelint |
 | `npm run lint:ts` | Vérification TypeScript |
+| `npm run test:a11y` | Exécute les tests d'accessibilité |
 
 ### Workflow de développement
 
@@ -82,6 +83,43 @@ L'application sera accessible sur `http://localhost:3000`
 2. **Compilez** avec `npm run build`
 3. **Testez** avec `npm run dev`
 4. **Lintez** avec `npm run lint`
+
+## 🧪 Tests d'accessibilité
+
+Le projet inclut des tests d'accessibilité automatisés utilisant Playwright et axe-core pour garantir la conformité aux standards WCAG 2.0/2.1 AA.
+
+### Lancer les tests
+
+```bash
+# Installation des navigateurs (première fois uniquement)
+npx playwright install
+
+# Exécuter les tests d'accessibilité
+npm run test:a11y
+```
+
+### Fonctionnement
+
+Le script de test :
+1. **Lance un serveur local** sur `http://localhost:3000`
+2. **Ouvre la page** avec Playwright (Chromium)
+3. **Analyse l'accessibilité** avec les règles WCAG 2.0/2.1 AA
+4. **Rapporte les violations** détaillées si trouvées
+
+### Résultats
+
+- ✅ **Succès** : "Aucune violation d'accessibilité trouvée"
+- ❌ **Échec** : Liste détaillée avec :
+  - Règle violée et impact
+  - Description du problème
+  - Éléments concernés
+  - Conseils de correction
+
+### Standards testés
+
+- WCAG 2.0 A & AA
+- WCAG 2.1 A & AA
+- Bonnes pratiques d'accessibilité
 
 ## 🔍 Linting
 
