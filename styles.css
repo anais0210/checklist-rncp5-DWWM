@@ -215,7 +215,7 @@ body {
 
 .block:hover {
     transform: translateY(-4px);
-            box-shadow: 0 12px 24px -8px rgb(247 168 184 / 20%);
+            box-shadow: 0 12px 24px -8px rgb(214 51 132 / 20%);
 }
 
 .block:hover::before {
@@ -300,7 +300,7 @@ body {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
     border-color: var(--primary-color);
-            box-shadow: 0 0 0 4px rgb(247 168 184 / 20%);
+            box-shadow: 0 0 0 4px rgb(214 51 132 / 20%);
 }
 
 .checklist input[type="checkbox"]:checked {
@@ -309,7 +309,7 @@ body {
 }
 
 .checklist input[type="checkbox"]:checked:focus {
-            box-shadow: 0 0 0 3px rgb(247 168 184 / 40%);
+            box-shadow: 0 0 0 3px rgb(214 51 132 / 40%);
 }
 
 .checklist input[type="checkbox"]:checked::after {
@@ -448,9 +448,9 @@ body {
 
 @media (prefers-contrast: more) {
     :root {
-        --primary-color: #E891A0;
+        --primary-color: #B02A5A;
         --text-color: #000;
-        --border-color: #C75B6B;
+        --border-color: #B02A5A;
     }
 }
 
@@ -593,7 +593,7 @@ main {
 .notes-content textarea:focus {
     outline: none;
     border-color: var(--gradient-start);
-            box-shadow: 0 0 0 2px rgb(247 168 184 / 20%);
+            box-shadow: 0 0 0 2px rgb(214 51 132 / 20%);
 }
 
 .search-container {
@@ -619,7 +619,7 @@ main {
 #search-input:focus {
     outline: none;
     border-color: var(--gradient-start);
-            box-shadow: 0 0 0 3px rgb(247 168 184 / 20%);
+            box-shadow: 0 0 0 3px rgb(214 51 132 / 20%);
 }
 
 .clear-search-btn {
