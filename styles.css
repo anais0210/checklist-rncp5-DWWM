@@ -774,3 +774,100 @@ main {
   }
 }
 
+/* Panneau d'information sur le stockage des données */
+.info-panel {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  border: 1px solid #d1e7ff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-content h3 {
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  padding: 8px 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.info-list li strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Lien GitHub dans le footer */
+.github-link-container {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.github-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Responsive pour le panneau d'information */
+@media (max-width: 768px) {
+  .info-panel {
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  .info-content h3 {
+    font-size: 16px;
+  }
+  
+  .info-list li {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+  
+  .github-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
