@@ -1,4 +1,4 @@
-import type { ProjectNameManager as IProjectNameManager } from './types.ts';
+import type { ProjectNameManager as IProjectNameManager } from './types';
 
 export class ProjectNameManager implements IProjectNameManager {
     constructor() {

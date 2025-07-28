@@ -1,4 +1,4 @@
-import type { ExportManager as IExportManager } from './types.ts';
+import type { ExportManager as IExportManager } from './types';
 
 export class ExportManager implements IExportManager {
     constructor() {

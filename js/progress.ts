@@ -1,4 +1,4 @@
-import type { ProgressManager as IProgressManager, ChecklistProgress } from './types.ts';
+import type { ProgressManager as IProgressManager, ChecklistProgress } from './types';
 
 export class ProgressManager implements IProgressManager {
     constructor() {

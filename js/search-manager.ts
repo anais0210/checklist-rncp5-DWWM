@@ -1,4 +1,4 @@
-import type { SearchManager as ISearchManager } from './types.ts';
+import type { SearchManager as ISearchManager } from './types';
 
 export class SearchManager implements ISearchManager {
     constructor() {

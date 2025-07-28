@@ -1,80 +1,61 @@
-import type { ResetManager as IResetManager } from './types';
-
-export class ResetManager implements IResetManager {
+export class ResetManager {
     constructor() {
         this.setupEventListeners();
     }
-
-    private setupEventListeners(): void {
-        const resetBtn: HTMLElement | null = document.getElementById('reset-all-btn');
+    setupEventListeners() {
+        const resetBtn = document.getElementById('reset-all-btn');
         if (resetBtn) {
-            resetBtn.addEventListener('click', (): void => this.confirmReset());
+            resetBtn.addEventListener('click', () => this.confirmReset());
         }
     }
-
-    public confirmReset(): void {
-        const confirmed: boolean = confirm(
-            ' ATTENTION !\n\n' +
+    confirmReset() {
+        const confirmed = confirm(' ATTENTION !\n\n' +
             'Êtes-vous sûr de vouloir tout réinitialiser ?\n\n' +
             'Cette action va :\n' +
             '• Décocher toutes les cases\n' +
             '• Vider toutes les notes\n' +
             '• Supprimer toutes les données sauvegardées\n\n' +
-            'Cette action est irréversible !'
-        );
-
+            'Cette action est irréversible !');
         if (confirmed) {
             this.performReset();
         }
     }
-
-    public performReset(): void {
+    performReset() {
         console.log('Réinitialisation complète de la checklist...');
-
-        const checkboxes: NodeListOf<HTMLInputElement> = document.querySelectorAll('.checklist input[type="checkbox"]');
-        checkboxes.forEach((checkbox: HTMLInputElement): void => {
+        const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
             checkbox.checked = false;
         });
-
-        const textareas: NodeListOf<HTMLTextAreaElement> = document.querySelectorAll('.checklist textarea');
-        textareas.forEach((textarea: HTMLTextAreaElement): void => {
+        const textareas = document.querySelectorAll('.checklist textarea');
+        textareas.forEach((textarea) => {
             textarea.value = '';
         });
-
-        const projectNameInput: HTMLInputElement | null = document.getElementById('project-name') as HTMLInputElement;
+        const projectNameInput = document.getElementById('project-name');
         if (projectNameInput) {
             projectNameInput.value = '';
         }
-
         localStorage.removeItem('checklist-progress');
         localStorage.removeItem('checklist-notes');
         localStorage.removeItem('checklist-project-name');
-
         this.updateProgress();
-
         this.showResetConfirmation();
-
         console.log('Réinitialisation terminée');
     }
-
-    public updateProgress(): void {
+    updateProgress() {
         document.dispatchEvent(new CustomEvent('checklist-updated'));
-        
         const progressManager = window.app?.progressManager;
         if (progressManager) {
             progressManager.updateProgress();
         }
     }
-
-    public showResetConfirmation(): void {
-        const notification: HTMLDivElement = document.createElement('div');
+    showResetConfirmation() {
+        const notification = document.createElement('div');
         notification.className = 'reset-notification';
         notification.innerHTML = `
             <div class="reset-notification-content">
                 <span>Checklist réinitialisée avec succès !</span>
             </div>
         `;
-        
         notification.style.cssText = `
             position: fixed;
             top: 20px;
@@ -88,8 +69,7 @@ export class ResetManager implements IResetManager {
             animation: slideIn 0.3s ease-out;
             font-weight: 500;
         `;
-
-        const style: HTMLStyleElement = document.createElement('style');
+        const style = document.createElement('style');
         style.textContent = `
             @keyframes slideIn {
                 from {
@@ -113,16 +93,15 @@ export class ResetManager implements IResetManager {
             }
         `;
         document.head.appendChild(style);
-
         document.body.appendChild(notification);
-
-        setTimeout((): void => {
+        setTimeout(() => {
             notification.style.animation = 'slideOut 0.3s ease-in';
-            setTimeout((): void => {
+            setTimeout(() => {
                 if (notification.parentNode) {
                     notification.parentNode.removeChild(notification);
                 }
             }, 300);
         }, 3000);
     }
-} 
+}
+//# sourceMappingURL=reset-manager.js.map

@@ -1,4 +1,4 @@
-import type { NotesManager as INotesManager, ChecklistNotes } from './types.ts';
+import type { NotesManager as INotesManager, ChecklistNotes } from './types';
 
 export class NotesManager implements INotesManager {
     constructor() {

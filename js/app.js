@@ -4,16 +4,7 @@ import { NotesManager } from './notes-manager';
 import { SearchManager } from './search-manager';
 import { ResetManager } from './reset-manager';
 import { ProjectNameManager } from './project-name-manager';
-import type { App as IApp, Config } from './types';
-
-class App implements IApp {
-    public readonly progressManager: ProgressManager;
-    public readonly exportManager: ExportManager;
-    public readonly notesManager: NotesManager;
-    public readonly searchManager: SearchManager;
-    public readonly resetManager: ResetManager;
-    public readonly projectNameManager: ProjectNameManager;
-
+class App {
     constructor() {
         console.log('App initialisée');
         this.progressManager = new ProgressManager();
@@ -23,29 +14,27 @@ class App implements IApp {
         this.resetManager = new ResetManager();
         this.projectNameManager = new ProjectNameManager();
         this.loadVersion();
-        
         window.app = this;
-        
         document.addEventListener('checklist-updated', () => {
             this.progressManager.updateProgress();
         });
     }
-
-    public async loadVersion(): Promise<void> {
+    async loadVersion() {
         try {
-            const response: Response = await fetch('config.json');
-            const config: Config = await response.json();
-            const versionElement: HTMLElement | null = document.getElementById('version-number');
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const versionElement = document.getElementById('version-number');
             if (versionElement) {
                 versionElement.textContent = `v${config.version}`;
             }
-        } catch (error) {
+        }
+        catch (error) {
             console.error('Erreur lors du chargement de la version:', error);
         }
     }
 }
-
-document.addEventListener('DOMContentLoaded', (): void => {
+document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM chargé, initialisation de l\'app');
     new App();
-}); 
+});
+//# sourceMappingURL=app.js.map
